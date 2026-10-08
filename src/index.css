@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu",
+    "Noto Sans Kannada", "Noto Sans Bengali", "Noto Sans Gurmukhi", "Nirmala UI", "Segoe UI",
+    sans-serif;
+  --font-serif: "Newsreader", Georgia, "Noto Sans Devanagari", "Nirmala UI", serif;
+  --color-soil: #1f7a3a;
+  --color-soil-dark: #145c2c;
+  --color-ink: #1a1d1b;
+  --color-muted: #5d665f;
+  --color-line: #e6ebe4;
+  --color-paper: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+html[data-lang]:not([data-lang="en"]) .font-display {
+  font-family: "Source Sans 3", "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu",
+    "Noto Sans Kannada", "Noto Sans Bengali", "Noto Sans Gurmukhi", "Nirmala UI", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: #d7f0df;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
