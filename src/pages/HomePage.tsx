@@ -31,8 +31,8 @@ export function HomePage() {
   }
 
   return (
-    <div className="mx-auto grid max-w-[1240px] gap-8 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]">
-      <div>
+    <div className="mx-auto grid w-full min-w-0 max-w-[1240px] gap-8 px-4 pb-16 pt-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="min-w-0">
         <h1 className="font-display max-w-4xl text-[2.15rem] font-semibold leading-[1.12] tracking-tight text-ink sm:text-[2.7rem]">
           {t("heroTitle")}
         </h1>
@@ -58,7 +58,7 @@ export function HomePage() {
         </form>
 
         <div className="mt-6 flex flex-col items-stretch justify-center gap-5 sm:flex-row sm:items-start">
-          <div className="sm:w-[270px]">
+          <div className="min-w-0 sm:w-[270px]">
             <Link
               to="/share"
               className="flex h-12 items-center justify-center gap-2 rounded-full bg-soil px-4 text-[15px] font-semibold text-white hover:bg-soil-dark"
@@ -69,7 +69,7 @@ export function HomePage() {
             </Link>
             <p className="mt-2 text-center text-[12.5px] leading-snug text-muted">{t("shareCaption")}</p>
           </div>
-          <div className="sm:w-[270px]">
+          <div className="min-w-0 sm:w-[270px]">
             <Link
               to="/volunteer"
               className="flex h-12 items-center justify-center gap-2 rounded-full border border-[#b7d2c0] bg-white px-4 text-[15px] font-semibold text-[#243028] hover:border-soil hover:text-soil"
@@ -125,7 +125,7 @@ export function HomePage() {
         </section>
       </div>
 
-      <aside className="lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-auto">
+      <aside className="min-w-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-auto">
         <section className="rounded-xl border border-line bg-white p-3">
           <h2 className="px-1 pb-2 text-[15px] font-bold text-ink">{t("mapCardTitle")}</h2>
           <WorldMap />

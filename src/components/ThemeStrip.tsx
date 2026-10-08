@@ -33,19 +33,19 @@ export function ThemeStrip() {
   const { t } = useI18n();
   const { stories } = useLibrary();
   return (
-    <div className="mt-8 flex gap-2 overflow-x-auto pb-1 no-scrollbar lg:grid lg:grid-cols-10 lg:overflow-visible">
+    <div className="mt-8 grid grid-cols-4 gap-2 sm:grid-cols-5 lg:grid-cols-10">
       {themes.map((theme) => {
         const Icon = icons[theme.id];
         return (
           <Link
             key={theme.id}
             to={`/stories?theme=${theme.id}`}
-            className="flex w-[88px] shrink-0 flex-col items-center rounded-xl px-1 py-1 text-center hover:bg-[#f6faf7] lg:w-auto"
+            className="flex min-w-0 flex-col items-center rounded-xl px-1 py-1 text-center hover:bg-[#f6faf7]"
           >
             <span className={`grid h-11 w-11 place-items-center rounded-2xl ${theme.tint} ${theme.ink}`}>
               <Icon size={20} strokeWidth={1.8} />
             </span>
-            <span className="mt-2 text-[12px] font-semibold leading-tight text-[#243028]">
+            <span className="mt-2 break-words text-[11px] font-semibold leading-tight text-[#243028] sm:text-[12px]">
               {t(themeLabelKey[theme.id])}
             </span>
             <span className="mt-0.5 text-[11px] text-muted">

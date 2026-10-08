@@ -64,8 +64,8 @@ export function StoryPage() {
   }
 
   return (
-    <article className="mx-auto grid max-w-[1100px] gap-10 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_280px]">
-      <div>
+    <article className="mx-auto grid w-full min-w-0 max-w-[1100px] gap-10 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_280px]">
+      <div className="min-w-0">
         <Link to="/stories" className="text-sm font-semibold text-soil">
           ← {t("backToStories")}
         </Link>
@@ -85,7 +85,7 @@ export function StoryPage() {
           </div>
         )}
         <p className="mt-5 text-sm font-semibold text-soil">{story.badge ?? t(themeLabelKey[story.theme])}</p>
-        <h1 className="font-display mt-1 text-4xl font-semibold leading-tight tracking-tight">{story.title}</h1>
+        <h1 className="font-display mt-1 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{story.title}</h1>
         <p className="mt-3 max-w-2xl text-lg text-[#3e4942]">{story.excerpt}</p>
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
           {story.location && (
@@ -151,7 +151,7 @@ export function StoryPage() {
           {copied ? t("linkCopied") : t("copyLink")}
         </button>
       </div>
-      <aside className="space-y-4 lg:sticky lg:top-28 lg:self-start">
+      <aside className="min-w-0 space-y-4 lg:sticky lg:top-28 lg:self-start">
         <section className="rounded-2xl border border-line p-4">
           <h2 className="text-sm font-bold uppercase tracking-wide text-muted">{t("aboutStoryteller")}</h2>
           <p className="font-display mt-2 text-2xl font-semibold">{story.author}</p>

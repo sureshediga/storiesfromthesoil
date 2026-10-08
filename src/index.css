@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -24,6 +25,14 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
 }
 
 html[data-lang]:not([data-lang="en"]) .font-display {

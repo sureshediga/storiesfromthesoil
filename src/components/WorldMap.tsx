@@ -25,10 +25,10 @@ export function WorldMap({
   const { stories } = useLibrary();
 
   return (
-    <div className="relative aspect-[960/460] overflow-hidden rounded-xl bg-[#e4f3f1]">
+    <div className="relative aspect-[960/460] w-full min-w-0 overflow-hidden rounded-xl bg-[#e4f3f1]">
       <svg
         viewBox={`0 0 ${WORLD_MAP.width} ${WORLD_MAP.height}`}
-        className="h-full w-full"
+        className="absolute inset-0 h-full w-full"
         role="img"
         aria-label={t("mapCardTitle")}
       >

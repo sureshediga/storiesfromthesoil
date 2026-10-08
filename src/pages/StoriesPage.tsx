@@ -21,12 +21,12 @@ export function StoriesPage() {
   }, [t]);
 
   return (
-    <div className="mx-auto grid max-w-[1240px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]">
-      <div>
+    <div className="mx-auto grid w-full min-w-0 max-w-[1240px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+      <div className="min-w-0">
         <h1 className="font-display text-4xl font-semibold tracking-tight">{t("navStories")}</h1>
         <p className="mt-2 max-w-2xl text-muted">{t("curatedNote")}</p>
         <form
-          className="mt-5 flex gap-3"
+          className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center"
           role="search"
           onSubmit={(event) => {
             event.preventDefault();
@@ -91,7 +91,7 @@ export function StoriesPage() {
           </div>
         )}
       </div>
-      <aside className="lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-auto">
+      <aside className="min-w-0 lg:sticky lg:top-28 lg:max-h-[calc(100vh-8rem)] lg:self-start lg:overflow-auto">
         <FilterPanel
           stories={stories}
           value={filters}

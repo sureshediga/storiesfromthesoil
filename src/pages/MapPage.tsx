@@ -23,8 +23,8 @@ export function MapPage() {
   }, [t]);
 
   return (
-    <div className="mx-auto max-w-[1100px] px-4 py-8 sm:px-6">
-      <h1 className="font-display text-4xl font-semibold tracking-tight">{t("mapTitle")}</h1>
+    <div className="mx-auto w-full min-w-0 max-w-[1100px] px-4 py-8 sm:px-6">
+      <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">{t("mapTitle")}</h1>
       <p className="mt-3 max-w-2xl text-lg text-[#3e4942]">{t("mapLead")}</p>
       <div className="mt-6 overflow-hidden rounded-2xl border border-line p-3">
         <WorldMap active={active} tall />

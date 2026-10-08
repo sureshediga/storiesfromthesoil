@@ -68,8 +68,8 @@ export function Layout() {
         Skip to content
       </a>
       <header className="sticky top-0 z-40 border-b border-[#edf0ec] bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-20 max-w-[1240px] items-center gap-4 px-4 sm:h-[100px] sm:px-6">
-          <Logo />
+        <div className="mx-auto flex h-16 min-w-0 max-w-[1240px] items-center gap-2 px-3 sm:h-[100px] sm:gap-4 sm:px-6">
+          <Logo className="h-11 max-w-[46vw] sm:h-[78px] sm:max-w-none" />
           <nav className="ml-6 hidden flex-1 items-center justify-center gap-7 lg:flex">
             {links.map((link) => (
               <NavLink
@@ -99,7 +99,7 @@ export function Layout() {
                 }}
               >
                 <Globe size={16} />
-                {current.label}
+                <span className="hidden sm:inline">{current.label}</span>
               </button>
               {langOpen && (
                 <ul
@@ -188,7 +188,7 @@ export function Layout() {
         <Outlet />
       </main>
       <footer className="border-t border-[#edf0ec] bg-[#f7faf7]">
-        <div className="mx-auto grid max-w-[1240px] gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.4fr_1fr]">
+        <div className="mx-auto grid w-full min-w-0 max-w-[1240px] gap-8 px-4 py-10 sm:px-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div>
             <Logo />
             <p className="font-display mt-4 max-w-xl text-xl italic leading-snug text-[#243028]">{t("footerQuote")}</p>
