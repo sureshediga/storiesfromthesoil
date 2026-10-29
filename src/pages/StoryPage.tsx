@@ -98,7 +98,7 @@ export function StoryPage() {
               {t("recordedIn")} {story.language}
             </span>
           )}
-          <span>{story.timeAgo}</span>
+          {story.timeAgo && <span>{story.timeAgo}</span>}
         </div>
         {story.note && (
           <p className="mt-4 rounded-xl bg-[#f8f1e4] px-4 py-3 text-sm text-[#6d542c]">{story.note}</p>

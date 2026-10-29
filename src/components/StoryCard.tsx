@@ -107,7 +107,7 @@ export function StoryCard({ story, compact = false }: { story: Story; compact?: 
             <span className="block truncate font-semibold text-[#243028]">
               {t("by")} {story.author}
             </span>
-            <span className="text-muted">{story.timeAgo}</span>
+            {story.timeAgo && <span className="text-muted">{story.timeAgo}</span>}
           </span>
         </div>
       </div>

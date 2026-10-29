@@ -124,7 +124,7 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
       addStory,
       addVolunteer,
     };
-  }, [extra, volunteers]);
+  }, [extra, volunteers, seedStories]);
 
   return <LibraryContext.Provider value={value}>{children}</LibraryContext.Provider>;
 }
